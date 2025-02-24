@@ -1,11 +1,10 @@
 import qrcode
 import qrcode.main as qrcm
-from PIL import Image
 
 
 class QRCodeGenerator:
     @staticmethod
-    def generate_qr_code(data: str) -> Image:
+    def generate_qr_code(data: str) -> qrcm.GenericImage:
         qr = qrcm.QRCode(
             version=1,
             error_correction=qrcode.constants.ERROR_CORRECT_L,
